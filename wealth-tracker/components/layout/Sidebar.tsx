@@ -1,4 +1,3 @@
-// components/layout/Sidebar.tsx
 'use client';
 
 import Link from 'next/link';
@@ -17,6 +16,7 @@ import {
 import { signOut } from 'next-auth/react';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
+import { Badge } from '@/components/ui/badge';
 
 const navigationItems = [
   {
@@ -24,36 +24,42 @@ const navigationItems = [
     href: '/dashboard',
     icon: LayoutDashboard,
     color: 'text-blue-500',
+    badge: null,
   },
   {
     title: 'XTB Trading',
     href: '/xtb',
     icon: TrendingUp,
     color: 'text-orange-500',
+    badge: '3', // TODO: Número real de posiciones
   },
   {
     title: 'Trade Republic',
     href: '/trade-republic',
     icon: Briefcase,
     color: 'text-purple-500',
+    badge: null,
   },
   {
     title: 'Mintos',
     href: '/mintos',
     icon: Wallet,
     color: 'text-green-500',
+    badge: null,
   },
   {
     title: 'Inmueble',
     href: '/real-estate',
     icon: Home,
     color: 'text-cyan-500',
+    badge: null,
   },
   {
     title: 'Analytics',
     href: '/analytics',
     icon: BarChart3,
     color: 'text-yellow-500',
+    badge: null,
   },
 ];
 
@@ -87,14 +93,27 @@ export default function Sidebar() {
               key={item.href}
               href={item.href}
               className={cn(
-                'flex items-center space-x-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-all',
+                'flex items-center justify-between rounded-lg px-3 py-2.5 text-sm font-medium transition-all group',
                 isActive
                   ? 'bg-slate-800 text-white shadow-lg'
                   : 'text-slate-400 hover:bg-slate-800/50 hover:text-white'
               )}
             >
-              <Icon className={cn('h-5 w-5', isActive ? item.color : '')} />
-              <span>{item.title}</span>
+              <div className="flex items-center space-x-3">
+                <Icon className={cn('h-5 w-5', isActive ? item.color : 'group-hover:' + item.color)} />
+                <span>{item.title}</span>
+              </div>
+              {item.badge && (
+                <Badge 
+                  variant="outline" 
+                  className={cn(
+                    "h-5 w-5 p-0 flex items-center justify-center text-xs",
+                    isActive ? "border-blue-500 text-blue-500" : "border-slate-700 text-slate-500"
+                  )}
+                >
+                  {item.badge}
+                </Badge>
+              )}
             </Link>
           );
         })}
