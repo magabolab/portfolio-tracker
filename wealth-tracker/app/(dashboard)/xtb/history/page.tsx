@@ -3,13 +3,13 @@
 
 import { useEffect, useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import PLChart from '@/components/xtb/PLChart';
-import WinRateChart from '@/components/xtb/WinRateChart';
 import { Button } from '@/components/ui/button';
 import { RefreshCw, TrendingUp, TrendingDown, Target, Calendar } from 'lucide-react';
 import HistoryTable from '@/components/xtb/HistoryTable';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import XTBTabs from '@/components/xtb/XTBTabs';
+import PLChart from '@/components/xtb/PLChart';
+import WinRateChart from '@/components/xtb/WinRateChart';
 
 export default function XTBHistoryPage() {
   const [operations, setOperations] = useState([]);
@@ -40,7 +40,6 @@ export default function XTBHistoryPage() {
     fetchHistory();
   }, []);
 
-  // Calcular estadísticas
   const stats = operations.reduce(
     (acc: any, op: any) => {
       acc.totalTrades++;
@@ -97,11 +96,7 @@ export default function XTBHistoryPage() {
           Actualizar
         </Button>
       </div>
-{/* Gráficas de Performance */}
-<div className="grid gap-6 lg:grid-cols-2">
-  <PLChart />
-  <WinRateChart />
-</div>
+
       {/* Tabs */}
       <XTBTabs />
 
@@ -111,86 +106,94 @@ export default function XTBHistoryPage() {
         </Alert>
       )}
 
-      {/* Estadísticas */}
+      {/* Stats Cards */}
       {stats.totalTrades > 0 && (
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          <Card className="border-slate-800 bg-slate-900">
-            <CardContent className="p-6">
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-sm text-slate-400">P/L Total</p>
-                  <p className={`mt-2 text-2xl font-bold ${
-                    stats.totalPL >= 0 ? 'text-green-500' : 'text-red-500'
-                  }`}>
-                    {stats.totalPL >= 0 ? '+' : ''}{stats.totalPL.toFixed(2)}€
-                  </p>
+        <>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <Card className="border-slate-800 bg-slate-900/50 backdrop-blur">
+              <CardContent className="p-6">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="text-sm text-slate-400">P/L Total</p>
+                    <p className={`mt-2 text-2xl font-bold ${
+                      stats.totalPL >= 0 ? 'text-green-500' : 'text-red-500'
+                    }`}>
+                      {stats.totalPL >= 0 ? '+' : ''}{stats.totalPL.toFixed(2)}€
+                    </p>
+                  </div>
+                  {stats.totalPL >= 0 ? (
+                    <TrendingUp className="h-8 w-8 text-green-500" />
+                  ) : (
+                    <TrendingDown className="h-8 w-8 text-red-500" />
+                  )}
                 </div>
-                {stats.totalPL >= 0 ? (
-                  <TrendingUp className="h-8 w-8 text-green-500" />
-                ) : (
-                  <TrendingDown className="h-8 w-8 text-red-500" />
-                )}
-              </div>
-            </CardContent>
-          </Card>
+              </CardContent>
+            </Card>
 
-          <Card className="border-slate-800 bg-slate-900">
-            <CardContent className="p-6">
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-sm text-slate-400">Win Rate</p>
-                  <p className="mt-2 text-2xl font-bold text-white">
-                    {winRate.toFixed(1)}%
-                  </p>
-                  <p className="text-xs text-slate-500">
-                    {stats.winners}W / {stats.losers}L
-                  </p>
+            <Card className="border-slate-800 bg-slate-900/50 backdrop-blur">
+              <CardContent className="p-6">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="text-sm text-slate-400">Win Rate</p>
+                    <p className="mt-2 text-2xl font-bold text-white">
+                      {winRate.toFixed(1)}%
+                    </p>
+                    <p className="text-xs text-slate-500">
+                      {stats.winners}W / {stats.losers}L
+                    </p>
+                  </div>
+                  <Target className="h-8 w-8 text-blue-500" />
                 </div>
-                <Target className="h-8 w-8 text-blue-500" />
-              </div>
-            </CardContent>
-          </Card>
+              </CardContent>
+            </Card>
 
-          <Card className="border-slate-800 bg-slate-900">
-            <CardContent className="p-6">
-              <div>
-                <p className="text-sm text-slate-400">Avg Win / Loss</p>
-                <div className="mt-2 space-y-1">
-                  <p className="text-sm">
-                    <span className="text-green-500 font-medium">
-                      +{avgWin.toFixed(2)}€
-                    </span>
-                  </p>
-                  <p className="text-sm">
-                    <span className="text-red-500 font-medium">
-                      -{avgLoss.toFixed(2)}€
-                    </span>
-                  </p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card className="border-slate-800 bg-slate-900">
-            <CardContent className="p-6">
-              <div className="flex items-center justify-between">
+            <Card className="border-slate-800 bg-slate-900/50 backdrop-blur">
+              <CardContent className="p-6">
                 <div>
-                  <p className="text-sm text-slate-400">Duración Promedio</p>
-                  <p className="mt-2 text-2xl font-bold text-white">
-                    {avgDuration.toFixed(0)} días
-                  </p>
+                  <p className="text-sm text-slate-400">Avg Win / Loss</p>
+                  <div className="mt-2 space-y-1">
+                    <p className="text-sm">
+                      <span className="text-green-500 font-medium">
+                        +{avgWin.toFixed(2)}€
+                      </span>
+                    </p>
+                    <p className="text-sm">
+                      <span className="text-red-500 font-medium">
+                        -{avgLoss.toFixed(2)}€
+                      </span>
+                    </p>
+                  </div>
                 </div>
-                <Calendar className="h-8 w-8 text-purple-500" />
-              </div>
-            </CardContent>
-          </Card>
-        </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-slate-800 bg-slate-900/50 backdrop-blur">
+              <CardContent className="p-6">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="text-sm text-slate-400">Duración Promedio</p>
+                    <p className="mt-2 text-2xl font-bold text-white">
+                      {avgDuration.toFixed(0)} días
+                    </p>
+                  </div>
+                  <Calendar className="h-8 w-8 text-purple-500" />
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Charts */}
+          <div className="grid gap-6 lg:grid-cols-2">
+            <PLChart />
+            <WinRateChart />
+          </div>
+        </>
       )}
 
-      {/* Tabla de historial */}
-      <Card className="border-slate-800 bg-slate-900">
+      {/* History List */}
+      <Card className="border-slate-800 bg-slate-900/50 backdrop-blur">
         <CardHeader>
-          <CardTitle>Todas las Operaciones</CardTitle>
+          <CardTitle>Historial de Operaciones</CardTitle>
         </CardHeader>
         <CardContent>
           {isLoading ? (
