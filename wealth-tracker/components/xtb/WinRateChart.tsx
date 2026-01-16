@@ -1,11 +1,9 @@
-// components/xtb/WinRateChart.tsx
 'use client';
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ReferenceLine } from 'recharts';
 import { Target } from 'lucide-react';
 
-// TODO: Calcular de operaciones reales
 const mockData = [
   { month: 'Sep', winRate: 55, trades: 8 },
   { month: 'Oct', winRate: 62, trades: 10 },

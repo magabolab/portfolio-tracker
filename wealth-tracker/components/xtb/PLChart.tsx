@@ -1,11 +1,9 @@
-// components/xtb/PLChart.tsx
 'use client';
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from 'recharts';
 import { TrendingUp, TrendingDown } from 'lucide-react';
 
-// TODO: Datos reales de operaciones cerradas
 const mockData = [
   { month: 'Sep', pl: 145.50 },
   { month: 'Oct', pl: -85.20 },
