@@ -3,6 +3,8 @@
 
 import { useEffect, useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import PLChart from '@/components/xtb/PLChart';
+import WinRateChart from '@/components/xtb/WinRateChart';
 import { Button } from '@/components/ui/button';
 import { RefreshCw, TrendingUp, TrendingDown, Target, Calendar } from 'lucide-react';
 import HistoryTable from '@/components/xtb/HistoryTable';
@@ -95,7 +97,11 @@ export default function XTBHistoryPage() {
           Actualizar
         </Button>
       </div>
-
+{/* Gráficas de Performance */}
+<div className="grid gap-6 lg:grid-cols-2">
+  <PLChart />
+  <WinRateChart />
+</div>
       {/* Tabs */}
       <XTBTabs />
 

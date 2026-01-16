@@ -2,6 +2,7 @@
 import NetWorthCard from '@/components/dashboard/NetWorthCard';
 import AssetDistributionCard from '@/components/dashboard/AssetDistributionCard';
 import QuickStatsCard from '@/components/dashboard/QuickStatsCard';
+import EquityCurveChart from '@/components/dashboard/EquityCurveChart';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { AlertCircle, TrendingUp, ArrowRight } from 'lucide-react';
 import { Alert, AlertDescription } from '@/components/ui/alert';
@@ -39,6 +40,9 @@ export default function DashboardPage() {
           <AssetDistributionCard />
         </div>
       </div>
+
+      {/* NUEVA SECCIÓN: Gráfica de Evolución */}
+      <EquityCurveChart />
 
       {/* Quick Stats - Más espaciado */}
       <div>
