@@ -160,12 +160,30 @@ Para cambios:
 
 ---
 
-## 🗺️ DOCUMENTACIÓN COMPLETA
+## � CÓMO TRABAJAN LOS PROFESIONALES
+
+### Antes de empezar a codificar:
+
+**Lee**: [WORKFLOW.md](./WORKFLOW.md) (15 minutos)
+
+Incluye:
+- Cómo usar Git profesionalmente
+- Cómo trabajar con ramas
+- Cómo hacer commits y pushes
+- Cómo colaborar con otros
+- Cómo Vercel despliega automáticamente
+
+**Resultado**: Sabes exactamente cómo trabajan los profesionales.
+
+---
+
+## �🗺️ DOCUMENTACIÓN COMPLETA
 
 | Documento | Contenido | Tiempo |
 |-----------|-----------|--------|
 | **[START_HERE.md](./docs/START_HERE.md)** | Este archivo | 2 min |
 | **[SUMMARY_ES.md](./docs/SUMMARY_ES.md)** | Resumen ejecutivo | 2 min |
+| **[WORKFLOW.md](./WORKFLOW.md)** | Cómo trabajar profesionalmente | 15 min |
 | **[QUICK_REFERENCE.md](./docs/QUICK_REFERENCE.md)** | Cheat sheet | 2 min |
 | **[DEPLOYMENT_GUIDE.md](./docs/DEPLOYMENT_GUIDE.md)** | Desplegar paso a paso | 45 min |
 | **[VERIFICATION_REPORT.md](./docs/VERIFICATION_REPORT.md)** | Detalles técnicos | 15 min |
@@ -182,15 +200,18 @@ Para cambios:
 ### 👨‍💻 Soy Developer
 
 **Lee**:
-1. [QUICK_REFERENCE.md](./docs/QUICK_REFERENCE.md) (2 min)
-2. [TECHNICAL_SPEC.md](./docs/TECHNICAL_SPEC.md) (20 min)
-3. Explora el código
+1. [WORKFLOW.md](./WORKFLOW.md) (15 min - CRÍTICO)
+2. [QUICK_REFERENCE.md](./docs/QUICK_REFERENCE.md) (2 min)
+3. [TECHNICAL_SPEC.md](./docs/TECHNICAL_SPEC.md) (20 min)
+4. Explora el código
 
 **Hace**:
 - Corre `npm run dev`
 - Abre http://localhost:3000
 - Explora la UI
 - Lee `app/` y `lib/db/`
+- Crea una rama para tu feature
+- Trabaja y haz push
 
 ---
 

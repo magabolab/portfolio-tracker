@@ -92,7 +92,14 @@ Incluye:
 | **[PRODUCT_VISION.md](./PRODUCT_VISION.md)** | Casos de uso, propuesta de valor | 10 min | Todos |
 | **[WORKING_AGREEMENT.md](./WORKING_AGREEMENT.md)** | Cómo trabajamos juntos | 5 min | Colaboradores |
 
-### 2️⃣ TÉCNICO Y DEPLOYMENT
+### 2️⃣ FLUJO DE TRABAJO Y DESARROLLO
+
+| Documento | Contenido | Tiempo | Para Quién |
+|-----------|-----------|--------|-----------|
+| **[WORKFLOW.md](./WORKFLOW.md)** | Flujo profesional GitHub + Vercel + Git | 15 min | Developers |
+| **[QUICK_REFERENCE.md](./QUICK_REFERENCE.md)** | Cheat sheet, comandos, links | 2 min | Desarrollo rápido |
+
+### 3️⃣ TÉCNICO Y DEPLOYMENT
 
 | Documento | Contenido | Tiempo | Para Quién |
 |-----------|-----------|--------|-----------|
@@ -100,18 +107,12 @@ Incluye:
 | **[VERIFICATION_REPORT.md](./VERIFICATION_REPORT.md)** | Checklist técnico completo | 15 min | Tech leads |
 | **[TECHNICAL_SPEC.md](./TECHNICAL_SPEC.md)** | Stack, arquitectura, DB schema | 20 min | Desarrolladores |
 
-### 3️⃣ PLANIFICACIÓN Y ROADMAP
+### 4️⃣ PLANIFICACIÓN Y ROADMAP
 
 | Documento | Contenido | Tiempo | Para Quién |
 |-----------|-----------|--------|-----------|
 | **[DEVELOPMENT_PLAN.md](./DEVELOPMENT_PLAN.md)** | Roadmap, fases, next tasks | 15 min | Todos |
 | **[CHANGELOG.md](./CHANGELOG.md)** | Historial de cambios | 5 min | Mantenimiento |
-
-### 4️⃣ REFERENCIA RÁPIDA
-
-| Documento | Contenido | Tiempo | Para Quién |
-|-----------|-----------|--------|-----------|
-| **[QUICK_REFERENCE.md](./QUICK_REFERENCE.md)** | Cheat sheet, comandos, links | 2 min | Desarrollo rápido |
 
 ---
 
@@ -227,27 +228,29 @@ Incluye:
 ### 👨‍💻 Desarrollador Frontend
 
 **Leer primero:**
-1. TECHNICAL_SPEC.md (Stack section)
-2. QUICK_REFERENCE.md
-3. Explora carpeta `components/`
+1. WORKFLOW.md (cómo trabajar con Git)
+2. TECHNICAL_SPEC.md (Stack section)
+3. QUICK_REFERENCE.md
+4. Explora carpeta `components/`
 
-**Tiempo**: 20 minutos
+**Tiempo**: 30 minutos
 
-**Resultado**: Sabes cómo está estructurado el UI y cómo hacer cambios.
+**Resultado**: Sabes cómo está estructurado el UI, cómo trabajar con Git, y cómo hacer cambios.
 
 ---
 
 ### 👨‍💻 Desarrollador Backend
 
 **Leer primero:**
-1. TECHNICAL_SPEC.md (Database section)
-2. Explora carpeta `lib/db/`
-3. Explora `app/api/`
-4. QUICK_REFERENCE.md
+1. WORKFLOW.md (cómo trabajar con Git)
+2. TECHNICAL_SPEC.md (Database section)
+3. Explora carpeta `lib/db/`
+4. Explora `app/api/`
+5. QUICK_REFERENCE.md
 
-**Tiempo**: 30 minutos
+**Tiempo**: 45 minutos
 
-**Resultado**: Entiendes la arquitectura de datos y cómo conectar nuevas APIs.
+**Resultado**: Entiendes la arquitectura de datos, cómo trabajar con Git, y cómo conectar nuevas APIs.
 
 ---
 
@@ -287,6 +290,7 @@ Incluye:
 |----------|------|
 | ¿Qué es este proyecto? | PROJECT_OVERVIEW.md |
 | ¿Cuál es el problema que resolvemos? | PRODUCT_VISION.md |
+| ¿Cómo trabajo con Git y GitHub? | WORKFLOW.md |
 | ¿Cómo despliego en Vercel? | DEPLOYMENT_GUIDE.md |
 | ¿Está funcional? | VERIFICATION_REPORT.md |
 | ¿Qué stack tecnológico usamos? | TECHNICAL_SPEC.md |
