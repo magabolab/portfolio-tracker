@@ -23,7 +23,7 @@
 
 ### Opción 1: Sigue la Guía Paso a Paso
 
-👉 **[DEPLOYMENT_GUIDE.md](./docs/DEPLOYMENT_GUIDE.md)**
+👉 **[DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md)**
 
 Incluye:
 - Crear MongoDB Atlas (15 min)
@@ -40,18 +40,44 @@ Incluye:
 
 ---
 
+## 📅 VOY A DESARROLLAR FEATURES (Empezando Hoy)
+
+### Lee Primero (15 minutos)
+
+Para desarrollar sosteniblemente durante los próximos meses, necesitas entender el plan:
+
+1. **[DEVELOPMENT_ROADMAP.md](./DEVELOPMENT_ROADMAP.md)** (10 min)  
+   Estrategia completa: 14 semanas, 4 fases, roadmap visual
+
+2. **[THIS_WEEK_BOARD.md](./THIS_WEEK_BOARD.md)** (5 min)  
+   Tareas inmediatas esta semana (operativo)
+
+3. **[PHASE_0_VALIDATION.md](./PHASE_0_VALIDATION.md)** (5 min)  
+   Estado actual y checklist Fase 0
+
+### Después Empieza a Codificar
+
+Fase 0 (esta semana): Setup + MongoDB + Auth  
+Fase 1 (semanas 3-6): MVP XTB module  
+Fase 2 (semanas 7-10): Multi-plataforma  
+Fase 3 (semanas 11-14): Polish & optimize
+
+**Importante**: Revisa [WORKFLOW.md](./WORKFLOW.md) para saber cómo hacer commits profesionales
+
+---
+
 ## 📚 QUIERO ENTENDER EL PROYECTO PRIMERO
 
 ### Empieza Aquí (30 minutos)
 
 1. **¿Qué es?**  
-   → [PROJECT_OVERVIEW.md](./docs/PROJECT_OVERVIEW.md) (10 min)
+   → [PROJECT_OVERVIEW.md](./PROJECT_OVERVIEW.md) (10 min)
 
 2. **¿Para qué sirve?**  
-   → [PRODUCT_VISION.md](./docs/PRODUCT_VISION.md) (10 min)
+   → [PRODUCT_VISION.md](./PRODUCT_VISION.md) (10 min)
 
 3. **¿Cómo está hecho?**  
-   → [TECHNICAL_SPEC.md](./docs/TECHNICAL_SPEC.md) (10 min)
+   → [TECHNICAL_SPEC.md](./TECHNICAL_SPEC.md) (10 min)
 
 **Resultado**: Entiendes qué es y por qué está hecho así.
 
@@ -62,6 +88,21 @@ Incluye:
 ### ¿Necesito cambiar algo del código?
 
 **No.** El código está listo para production. Solo necesitas configurar variables de entorno en Vercel.
+
+---
+
+### ¿Hay un plan de desarrollo?
+
+**Sí.** Revisá:
+- **[DEVELOPMENT_ROADMAP.md](./DEVELOPMENT_ROADMAP.md)** - Plan estratégico 14 semanas
+- **[THIS_WEEK_BOARD.md](./THIS_WEEK_BOARD.md)** - Tareas esta semana
+- **[DEVELOPMENT_PLAN.md](./DEVELOPMENT_PLAN.md)** - Detalles de cada sprint
+
+Fases:
+- Fase 0: Setup & Fundamentos (esta semana)
+- Fase 1: MVP XTB (4-6 semanas)
+- Fase 2: Multi-plataforma (4-6 semanas)
+- Fase 3: Profesionalización (2+ semanas)
 
 ---
 

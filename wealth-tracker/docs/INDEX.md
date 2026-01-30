@@ -66,18 +66,16 @@ Cheat sheet con:
 </details>
 
 <details>
-<summary>🛣️ <b>Ver el roadmap</b> (10 min)</summary>
+<summary>🛣️ <b>Ver el roadmap de desarrollo</b> (10-15 min)</summary>
 
-Consult: **[DEVELOPMENT_PLAN.md](./DEVELOPMENT_PLAN.md)**
+Consult:
+1. **[DEVELOPMENT_ROADMAP.md](./DEVELOPMENT_ROADMAP.md)** - Estrategia 14 semanas (NUEVO)
+2. **[THIS_WEEK_BOARD.md](./THIS_WEEK_BOARD.md)** - Tareas inmediatas esta semana (NUEVO)
+3. **[PHASE_0_VALIDATION.md](./PHASE_0_VALIDATION.md)** - Checklist Fase 0 (NUEVO)
+4. **[DEVELOPMENT_PLAN.md](./DEVELOPMENT_PLAN.md)** - Plan detallado original
 
-Incluye:
-- Fase 0: Setup (completado)
-- Fase 1: MVP (XTB module)
-- Fase 2: Multi-plataforma
-- Fase 3: Profesionalización
-
-**Tiempo**: 10 minutos  
-**Resultado**: Sabes qué va a venir y cuándo
+**Tiempo**: 10-15 minutos  
+**Resultado**: Entiendes roadmap estratégico y tareas de esta semana
 </details>
 
 ---
@@ -92,11 +90,15 @@ Incluye:
 | **[PRODUCT_VISION.md](./PRODUCT_VISION.md)** | Casos de uso, propuesta de valor | 10 min | Todos |
 | **[WORKING_AGREEMENT.md](./WORKING_AGREEMENT.md)** | Cómo trabajamos juntos | 5 min | Colaboradores |
 
-### 2️⃣ FLUJO DE TRABAJO Y DESARROLLO
+### 2️⃣ FLUJO DE TRABAJO, DESARROLLO Y ROADMAP
 
 | Documento | Contenido | Tiempo | Para Quién |
 |-----------|-----------|--------|-----------|
 | **[WORKFLOW.md](./WORKFLOW.md)** | Flujo profesional GitHub + Vercel + Git | 15 min | Developers |
+| **[DEVELOPMENT_ROADMAP.md](./DEVELOPMENT_ROADMAP.md)** | Estrategia 14 semanas, fases, timeline | 15 min | Todos (especialmente PM/Tech Lead) |
+| **[THIS_WEEK_BOARD.md](./THIS_WEEK_BOARD.md)** | Tareas esta semana, board operativo | 5 min | Developers |
+| **[PHASE_0_VALIDATION.md](./PHASE_0_VALIDATION.md)** | Checklist Fase 0, estado actual | 10 min | Developers (Fase 0) |
+| **[DEVELOPMENT_PLAN.md](./DEVELOPMENT_PLAN.md)** | Plan detallado original, sprints | 20 min | Developers |
 | **[QUICK_REFERENCE.md](./QUICK_REFERENCE.md)** | Cheat sheet, comandos, links | 2 min | Desarrollo rápido |
 
 ### 3️⃣ TÉCNICO Y DEPLOYMENT
@@ -106,12 +108,15 @@ Incluye:
 | **[DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md)** | Paso a paso Vercel + MongoDB | 45 min | Devops/Deployment |
 | **[VERIFICATION_REPORT.md](./VERIFICATION_REPORT.md)** | Checklist técnico completo | 15 min | Tech leads |
 | **[TECHNICAL_SPEC.md](./TECHNICAL_SPEC.md)** | Stack, arquitectura, DB schema | 20 min | Desarrolladores |
+| **[PHASE_0_VALIDATION.md](./PHASE_0_VALIDATION.md)** | Estado actual validado, blockers | 10 min | Developers |
 
 ### 4️⃣ PLANIFICACIÓN Y ROADMAP
 
 | Documento | Contenido | Tiempo | Para Quién |
 |-----------|-----------|--------|-----------|
-| **[DEVELOPMENT_PLAN.md](./DEVELOPMENT_PLAN.md)** | Roadmap, fases, next tasks | 15 min | Todos |
+| **[DEVELOPMENT_ROADMAP.md](./DEVELOPMENT_ROADMAP.md)** | Estrategia completa 14 semanas | 15 min | Todos |
+| **[THIS_WEEK_BOARD.md](./THIS_WEEK_BOARD.md)** | Tareas operativas esta semana | 5 min | Developers |
+| **[DEVELOPMENT_PLAN.md](./DEVELOPMENT_PLAN.md)** | Roadmap detallado, fases, sprints | 20 min | Developers |
 | **[CHANGELOG.md](./CHANGELOG.md)** | Historial de cambios | 5 min | Mantenimiento |
 
 ---
